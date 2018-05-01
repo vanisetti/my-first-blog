@@ -13,8 +13,13 @@
 	and write a one or two sentence intro about what makes your project cool. -->
 	<div id="top">
 		<span id="title">Programming 4- Blog Post Project</span>
-		<div id="intro"> I wanted to create a website which allowed college students to share and donate used textbooks in order to help people save money and encourage people to continue their studies. In order to create the website, I learned how to create a blog using a tutorial from Django Girls. This tutorial taught me the basics of creating a completely functioning blog.
-</div>
+		<div id="intro"> I originally wanted to create a website and I even had a name planned out for it: Shelf It. “Shelf It” is a website/app which would act as a platform for people to donate books to others. It would consist of many genres of books ranging from textbooks to picture books. It would also target people of all ages but high school and college students in particular. College textbook prices are incredibly high, and once the student graduates, their textbooks become useless. Instead of letting the textbooks languish in a dumpster, “Shelf It” ensures that the books can be put to good use to those in need. Whoever receives these books can use them for however long they are needed, and can later donate them on the website to pass on the knowledge. This cycle of sharing books could enable students to obtain a great education, allow people to feed their curiosity, and enable people to discover their passion for reading without having to worry about the cost. Before checking out, people can choose to pay for the book(s) they want, with the proceeds going to a charity in their area. “Shelf It” will spread love for books, save the environment and help the community grow. 
+		</div>
+		<img class="project-img" style="float: left; width: 400px" src="img/networks.jpg">
+		<div>
+
+        In order to have this website make a difference, I had to learn how to make a website. So I began by learning how to create a blog. A blog has many of the same aspects I was looking for in my website. It has an admin page, I learn how to enter data and have it show up in the format I want. Hence, it was a great first step to learning the basics of creating a website. I used a website called Django Girls (https://tutorial.djangogirls.org/en/) which had a tutorial on how to create a blog. This tutorial also had in-depth explanations of how everything worked which was really helpful because I not only learned how to create a website but also many of the basics about python.
+
 	</div>
 
 	<!-- Use the these sections as templates for reporting your process and results. Use
@@ -23,42 +28,85 @@
 	GitHub repo, research papers you read, etc. Keep the class attributes on the divs to
 	keep your styling consistent (or change them, if you'd like!). -->
 	<div class="description-section">
-		<div class="section-title">Data Source</div>
+		<div class="section-title">PROCESS</div>
 		<div class="section-detail">
-			
-		</div>
+			Command Line → Terminal
+            Code Editor  → Sublime Text
+            Server       → PythonAnywhere
+
+            With regards to the code, I used sublime text and the terminal. I installed the 3.6 version of python for my project. There are a lot of server providers available on the internet, but I used PythonAnywhere. PythonAnywhere is free for small applications that don't have too many visitors so it was very convenient for me. I also had to install Django (version 1.11.0). Django is a free and open source web application framework, written in Python. It consists of components that help develop websites faster. Django is very useful especially when requesting things from webserver. When a request comes to a web server, it’s passed to Django which tries to figure out what is requested. This is done by Django’s urlresolver. Django checks patterns to see if something matches and then it passed the request to the associated function--which is called the view. In the view function you can look for information in a database. The view checks if you are allowed to do something and generates a response which is used by Django to send to the user’s web browser.
+            </div>
+            <img class="project-img" style="float: right; width: 400px" src="img/success.jpg">
+            <div>
+
+            Side note: I had a hard time installing Django because for some reason it wasn’t compatible with the version of python I had. Even though I installed the latest version of python, When I tried installing Django it reverted back to the old version of python and hence, Django wouldn’t install. But after many attempts or making sure the right version of python was being used, and pip being constantly upgraded, Django was successfully installed!
+
+
+
+		
 	</div>
 
 	<div class="description-section">
-		<div class="section-title">Data Cleaning</div>
+		<div class="section-title">Some New Things I Learned</div>
 		<div class="section-detail">
+         I also created a virtual environment. Virtualenv will isolate your Python/Django setup on a per-project basis. This means that any changes you make to one website won't affect any others you're also developing. When it came to setting up my database, there are a lot of different database software that can store data for your site. But I used the default one, sqlite3
 
+         I started the web server by running it on this browser http://127.0.0.1:8000/
+     </div>
+         <img class="project-img" style="float: center; width: 400px" src="img/model.jpg">
+     <div>
 
-		</div>
+         Next, I learned to create objects and models. A model in Django is a special kind of object which is saved in the database. Models in the database is like a spreadsheet with columns (fields) and rows(data). In the file blog/models.py, I defined the blog post. This is how the file looks above.
+         
+         And here’s what some of the functions do:
+
+        models.CharField – this is how you define text with a limited number of characters.
+
+        models.TextField – this is for long text without a limit. 
+
+        models.DateTimeField – this is a date and time.
+
+        models.ForeignKey – this is a link to another model.
+    </div>
+        <img class="project-img" style="float: left; width: 400px" src="img/admin.jpg"><img class="project-img" style="float: right; width: 400px" src="img/ab.jpg">
+    <div>
+
+        Next, I worked on creating the admin. Although the admin page doesn’t show up on my current blog, I did learn to create it. I learned how to add and edit posts so I’m going to describe that process. In order to login I had to create a superuser which is an account that has control over everything. In the terminal I was prompted to enter basic admin information and once I was logged in I was directed to a page like this where I was able to add, delete and edit posts.
+
+        After this, I pushed all my work to GitHub and was able to access it through PythonAnywhere. On PythonAnywhere, I created an API token and opened up a console where I pulled the code from GitHub. Then I was able to open up a website which put up my blog on the internet at vanisetti.pythonanywhere.com
+
+        Then, I learned about views. Views is where you put the “logic” of our application. It requests informations from the model and sends it to the template. In this particular view, you see that you created a function (def) called post_list that takes request and return a function render that will render (put together) our template blog/post_list.html
+
 	</div>
 	<div class="description-section">
-		<div class="section-title">Testing Neural Networks</div>
-		<img class="project-img" style="float: right; width: 400px" src="img/blog.jpg">
+		<div class="section-title">HTML and CSS</div>
 		<div class="section-detail">
-			 
+			 Next thing I learned was….HTML! This was the part where things slowly began to come together. HTML is a code that is interpreted by your web browser to display a web page for the user. You basically take a document and mark it up with code to tell something how to interpret the page.
+
+            This is how my blog looked like after using HTML:
+
+        </div>
+         <img class="project-img" style="float: right; width: 400px" src="img/ogblog.jpg">
+
+        <div>
+
+            Important fact: Django provides built-in templates which allows you to transfer Python-like things into HTML, so you can build dynamic websites faster.
+
+            After all that, it was time to make the blog pretty using CSS. It's the language used to describe the look and format of a website written in HTML. So one of the first things I did was download Bootstrap as it is one of the most famous frameworks for developing sites.  Here’s how the blog looked after I used CSS:
 		</div>
-	</div>
+
+	<img class="project-img" style="float: right; width: 400px" src="img/blog.jpg">
+	
 
 	<div class="description-section">
 		<div class="section-title">Next Steps</div>
 		<div class="section-detail">
-			  However, even after finshing this entire tutorial I have only obtained a functioning blog. I wanted to create a website so I have much farther to go. But with the help of the new concepts I have learned, I know how to achieve that goal of creating a website. And I hope that along the way I gain new skills and my knowledge grows.
+			  After that, I learned more about template extensions, extending applications and forms but I don’t have a lot to show my progress in those fields. I changed certain aspects of the code to cater to how I wanted the blog to look which caused some of the other effects to not function. In the future as I continue to work on the project I will also work on having all features functioning at the same time. Which leads me to my future steps. This wasn’t the kind of project where I was going to realize something or explore a question. My project was pretty straight forward- I was going to create a website. However, I did gain a lot of knowledge in the process. Especially with the more fundamental aspects of python as well because my foundations weren’t very strong before. Because this is a project I care about, I will continue to work on it so I can create a website which accomplishes the goal of my original idea (the idea of trading books). I will go into detail and aim to learn more on the way.
+
 
 		</div>
 	</div>
 
-
-	<div class="description-section">
-		<div class="section-title">Special Thanks</div>
-		<div class="section-detail">
-			
-		</div>
-	</div>
 
 </body>
 </html>
